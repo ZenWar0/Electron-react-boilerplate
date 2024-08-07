@@ -1,1 +1,0 @@
-Trying to create new commit and push new changes integrating the build process with a Continuous Integration (CI) system to automate build and test procedures
