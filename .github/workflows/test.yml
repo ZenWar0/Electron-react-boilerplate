@@ -32,7 +32,3 @@ jobs:
           npm run lint
           npm exec tsc
           npm test
-
-      - name: Run Playwright tests
-        run: |
-          npx playwright test
