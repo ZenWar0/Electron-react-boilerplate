@@ -20,10 +20,42 @@ jobs:
           node-version: 18
           cache: npm
 
+      - name: Install dependencies for Ubuntu
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwoff2-dev \
+            libvpx-dev \
+            libevent-dev \
+            libopus-dev \
+            libgstreamer1.0-dev \
+            libgstreamer-plugins-base1.0-dev \
+            libharfbuzz-dev \
+            libhyphen-dev \
+            libflite1 \
+            libgles2-mesa \
+            libx264-dev
+          npm install
+
+      - name: Install dependencies for macOS
+        run: |
+          brew install \
+            libwoff2 \
+            libvpx \
+            libevent \
+            opus \
+            gst-plugins-base \
+            harfbuzz \
+            hyphen \
+            flite \
+            mesa \
+            x264
+          npm install
+
       - name: npm install
         run: |
           npm install
-          
+
       - name: Install Playwright browsers
         run: |
           npx playwright install
