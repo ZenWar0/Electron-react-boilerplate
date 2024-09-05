@@ -89,7 +89,8 @@
     },
     "testPathIgnorePatterns": [
       "release/app/dist",
-      ".erb/dll"
+      ".erb/dll",
+      "playwrightTests"
     ],
     "collectCoverage": true,
     "collectCoverageFrom": [
