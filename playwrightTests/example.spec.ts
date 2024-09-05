@@ -26,6 +26,10 @@ test.describe.serial(() => {
     page.on('console', console.log);
   });
 
+  test.afterAll(async () => {
+    await electronApp.close();
+  });
+
   test('Electron App has the correct buttons on it', async () => {
     // Evaluation expression in the Electron context.
     const appPath = await electronApp.evaluate(async ({ app }) => {
