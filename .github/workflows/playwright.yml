@@ -23,7 +23,10 @@ jobs:
       - name: npm install
         run: |
           npm install
-          npm init playwright@latest
+          
+      - name: Install Playwright browsers
+        run: |
+          npx playwright install
 
       - name: Run PlayWright tests
         env:
